@@ -5,11 +5,10 @@ export default function handleResponseFromAPI(promise) {
       status: 200,
       body: 'success',
     });
-    reject(new Error());
   });
   return myPromise
-    .then((response) => {})
-    .catch((err) => {})
+    .then(() => {})
+    .catch(() => Error())
     .finally(() => {
       console.log('Got a response from the API');
       });
